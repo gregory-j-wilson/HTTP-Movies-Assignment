@@ -35,7 +35,6 @@ function Movie({ addToSavedList }) {
     axios
       .delete(`http://localhost:5000/api/movies/${params.id}`)
       .then((res) => {
-        setMovie(res.data);
         history.push("/");
         // afternoon project
         // server returns the id of the deleted item
